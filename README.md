@@ -2,8 +2,8 @@
 
 Neste exemplo você precisa já ter instalado em seu computador:
 - .Net Core 3.1
-- Docker
-- Editor de código, neste exemplo estou usando o VsCode
+- Docker instalado e configurado
+- Editor de código, neste exemplo utiilizei o VsCode durante o desenvolvimento
 
 Primeiro passo é subir um ambiente RabbitMQ utilizando o Docker, para isso rode o comando abaixo em seu cmd\terminal:
 
@@ -19,13 +19,14 @@ Agora basta acessar o RabbitMQ no navegar através da url http://localhost:15672
 - Usuario: guest
 - Senha: guest
 
+
+# Visão Geral do Publish \ Subscribe 
+
 # Queues
 
 # Exchange
 
-# Visão Geral do Publish \ Subscribe 
-
-# Documentação Rabbit
+# Documentação RabbitMQ
 Por fim, o site do próprio RabbitMQ tem muita informação, muitos exemplos em diversas linguagens e que com certeza vai te ajudar.
 
 Link: https://www.rabbitmq.com/getstarted.html
