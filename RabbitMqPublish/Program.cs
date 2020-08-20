@@ -18,8 +18,7 @@ namespace RabbitMq
             {
                 using(var channel = connection.CreateModel())
                 {
-                    channel.QueueDeclare(queue: "testeQueueEx", durable: true, exclusive: false, autoDelete: false, arguments: null);
-                    channel.ExchangeDeclare(exchange: "amq.fanout", type: "fanout", durable: true, autoDelete: false);
+                    channel.ExchangeDeclare(exchange: "amq.fanout", type: ExchangeType.Fanout, durable: true, autoDelete: false);
 
                     byte[] messageBodyBytes = System.Text.Encoding.UTF8.GetBytes("{{ nome:\"Fernando\", dataNascimento:\"29-07\" }}");
                     
