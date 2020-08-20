@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "iqA+G64q+jtMnjU5e+wC8Pm2UdjltnXYCNTypAT1SNfE0/Pa9vsHORUGpWqiaFG6f9y7iXVX3xgxmc2p2BPaRw==",
+  "success": true,
+  "projectFilePath": "/Users/fernandodomeneghetti/Documents/dev/RabbitMq/Poc/RabbitMq-Exemplo01/RabbitMqRead/RabbitMqRead.csproj",
+  "expectedPackageFiles": [
+    "/Users/fernandodomeneghetti/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/fernandodomeneghetti/.nuget/packages/rabbitmq.client/6.0.0/rabbitmq.client.6.0.0.nupkg.sha512",
+    "/Users/fernandodomeneghetti/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}
