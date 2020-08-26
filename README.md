@@ -13,7 +13,7 @@ Este comando ira baixar a imagem do RabbitMQ3 Management, e ao criar o container
 
 Para validar se o container está em execução, basta executar o comando docker container ls
 
-![Docker Container ps](Imagens\dockerps.png)
+![Docker Container ps](Imagens/dockerps.png)
 
 Agora basta acessar o RabbitMQ no navegar através da url http://localhost:15672/, o usuário default para o login é:
 - Usuario: guest
@@ -89,7 +89,7 @@ Assim que concluir o debug, você verá que as mensagens lidas, tem seu conteúd
 
 Importante voltar ao navegador do RabbitMQ e ver como ficou a Queue após a leitura, acesse o menu Queue, você verá que a quantidade de mensagens agora da fila é 0 novamente, ao acessar sua Queue veja no gráfico que após as mensagens serem lidas elas foram removidas e o gráfico ajuda inclusive a ver este momento:
 
-![RabbitMQ - Lendo uma Queue](Imagens\MensagemSaiuQueue.png)
+![RabbitMQ - Lendo uma Queue](Imagens/MensagemSaiuQueue.png)
 
 
 
