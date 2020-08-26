@@ -9,7 +9,7 @@ namespace RabbitMq
         {
             var connectionFactory = new ConnectionFactory()
             {
-                Uri = new Uri(@"amqp://guest:guest@127.0.0.1:5672/teste"),
+                Uri = new Uri(@"amqp://guest:guest@127.0.0.1:5672/"),
                 NetworkRecoveryInterval = TimeSpan.FromSeconds(10),
                 AutomaticRecoveryEnabled = true
             };

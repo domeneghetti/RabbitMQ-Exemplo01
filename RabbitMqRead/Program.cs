@@ -12,7 +12,7 @@ namespace RabbitMqRead
         {
             ConnectionFactory connectionFactory = new ConnectionFactory()
             {
-                Uri = new Uri(@"amqp://guest:guest@127.0.0.1:5672/teste"),
+                Uri = new Uri(@"amqp://guest:guest@127.0.0.1:5672/"),
                 NetworkRecoveryInterval = TimeSpan.FromSeconds(10),
                 AutomaticRecoveryEnabled = true
             };
@@ -21,7 +21,11 @@ namespace RabbitMqRead
             {
                 using(var channel = connection.CreateModel())
                 {
-                    channel.QueueDeclare(queue: "testeQueueEx", durable: true, exclusive: false, autoDelete: false, arguments: null);
+                    channel.QueueDeclare(queue: "testeQueueEx", 
+                                        durable: true, 
+                                        exclusive: false, 
+                                        autoDelete: false, 
+                                        arguments: null);
 
                     var consumer = new EventingBasicConsumer(channel);
                     consumer.Received += (model, ea) =>
