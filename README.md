@@ -57,6 +57,17 @@ abra o projeto RabbitMqPublish e no terminal basta digitar "dotnet run", assim q
 
 ![RabbitMQ - Publish](Imagens/Publish.png)
 
+Entre as linhas 10 e 15 está sendo criado a conexão com o Rabbit, mas precisamente na lina 12 onde informo na Uri
+
+- Amqp é o protocolo de comunicação
+- guest:guest são os dados de login no Rabbit
+- 127.0.0.0:5672 é referente ao servidor do Rabbit, como estamos rodando o Rabbit via Docker no próprio pc, informo apenas o ip seguido da porta mapeada no Docker
+- / a última barra serve para informar o host, por estar utilizando o host padrão, não será informado nenhum valor após a /, caso você crie um novo host pode então passar qual o host estaria sendo utilizado neste processo
+
+Na linha 21 declaro o Exchange utilizado
+Na linha 23 é a mensagem que será enviada a fila, o ponto de atenção aqui é que o Rabbit necessita que o conteúdo esteja em uma base64
+Na linha 25 é a publicação da mensagem em si informando o Exchange e o body.
+
 Volte ao RabbitMQ, note na página overview que as mensagens já foram identificadas:
 
 ![RabbitMQ - Overview](Imagens/RabbitOverview.png)
