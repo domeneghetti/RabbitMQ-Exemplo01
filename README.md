@@ -92,14 +92,25 @@ Importante voltar ao navegador do RabbitMQ e ver como ficou a Queue após a leit
 ![RabbitMQ - Lendo uma Queue](Imagens/MensagemSaiuQueue.png)
 
 
-
-# Visão Geral do Publish \ Subscribe 
-
 Agora que você já configurou e já viu uma mensagem sendo envianda e também já fez a leitura do conteúdo das mensagens na fila, vamos entender melhor o que são cada coisa e como elas se relacionam...
 
-# Queues
+# Visão Geral do Publish \ Consumer \ Subscribe 
 
-# Exchange
+- Publish: São os responsáveis pelo publicação da mensagem na Queue\Exchange
+- Consumer: São os ouvintes das Queues, os mesmos capturam a mensagem na Queue gerada pelo Publish e processam ela.
+- Subscribe: Em um modelo mais simples um Publish publicaria a mensagem diretamente em uma Queue que teria seu(s) consumidor(es), já no modelo Publish\Subscribe o Publish manda a mensagem em uma Exchange do tipo Fanout e a mensagem será clonada e entregue a todas as Queues ligados a ela.
+
+Com base no que foi falado acima, o caminho mais simple seria, um Publish simplesmente envia a mensagem em uma queue que terá um Consumer ouvindo ela e processará a mesma, como no desenho abaixo:
+
+![RabbitMQ - Modelo Simes](Imagens/Simples.png)
+
+Porém a quantidade de mensagens a serem processadas pode em muitos casos ser muito alta, neste caso você poderá colocar mais Consumer ouvindo a mesma fila, isso não deverá ser um problema, pois o RabbitMQ trabalha de forma atômica, entregando uma mensagem por vez aos consumers, além de garantir que a mensagem seja entregue somente a um Consumer.
+
+![RabbitMQ - Modelo Worker](Imagens/Worker.png)
+
+Já no modelo Publish\Subscribe, você entregará sua mensagem não a uma Queue em especifico mas sim a uma Exchange que distribuirá a mesma entre as Queues (exemplo do fonte deste artigo) e que será processada por um ou mais Consumers.
+
+![RabbitMQ - Modelo Worker](Imagens/PublishSubscribe.png)
 
 # Documentação RabbitMQ
 Por fim, o site do próprio RabbitMQ tem muita informação, muitos exemplos em diversas linguagens e que com certeza vai te ajudar.
